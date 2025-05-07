@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Todo } from "@/libs/types"
 import  TodoList from "@/components/TodoList"
+import styles from "./page.module.css"
 
 function shuffleTodos(array: Todo[]): Todo[] {
     let shuffledTodos = [...array]
@@ -26,7 +27,13 @@ export default async function Page() {
         todos = await response.json()
     } catch (error) {
         console.error("Error fetching todos: ", error)
-        return <div>Failed to load todos</div>
+        return (
+            <div className={styles.appContainer}>
+                <div className={styles.errorContainer}>
+                    <h1>Failed to load todos</h1>
+                </div>
+            </div>
+        )
     }
     if (todos.length > 3) {
         const shuffledTodos = shuffleTodos(todos)
@@ -37,8 +44,8 @@ export default async function Page() {
     
 
     return (
-        <>
+        <div className={styles.appContainer}>
             <TodoList inputTodos={finalTodos} />
-        </>
+        </div>
     )
 }

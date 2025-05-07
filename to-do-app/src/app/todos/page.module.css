@@ -1,0 +1,14 @@
+.appContainer {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #833AB4, #FCB045);
+    padding: 10px;
+}
+.errorContainer {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
