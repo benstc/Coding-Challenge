@@ -57,7 +57,7 @@ export default function TodoList({ inputTodos }: { inputTodos: Todo[] }) {
             alert("Task name must not be empty!")
         } else {
             let editedTodos = [...todos]
-            if (editingIndex) {
+            if (editingIndex !== undefined) {
                 editedTodos[editingIndex].title = value
             }
             setTodos(editedTodos)
