@@ -41,8 +41,6 @@ export default async function Page() {
     } else {
         finalTodos = todos
     }
-    
-
     return (
         <div className={styles.appContainer}>
             <TodoList inputTodos={finalTodos} />
