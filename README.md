@@ -13,5 +13,5 @@ npm install
 npm run dev
 ```
 
-#Screenshot
+# Screenshot
 ![App Screenshot](./to-do-app/public/screenshot.png)
